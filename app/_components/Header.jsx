@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { Button } from "@/@/components/ui/button";
+import { Button } from "../../@/components/ui/button";
 import { Search, LayoutGrid, ShoppingBag } from "lucide-react";
 import {
   DropdownMenu,
@@ -10,7 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/@/components/ui/dropdown-menu";
+} from "../../@/components/ui/dropdown-menu";
 import GlobalApi from "../_utils/GlobalApi";
 
 function Header() {
