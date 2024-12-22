@@ -1,6 +1,7 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/@/components/ui/button";
 import { Search, LayoutGrid, ShoppingBag } from "lucide-react";
 import {
   DropdownMenu,
@@ -9,9 +10,21 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/@/components/ui/dropdown-menu";
+import GlobalApi from "../_utils/GlobalApi";
 
 function Header() {
+  useEffect(()=>{
+    getCategoryList();
+
+  },[])
+  
+  const getCategoryList=()=>{
+    GlobalApi.getCategory().then(resp=>{
+      console.log("CategoryList Resp:",resp);
+    })
+  }
+
   return (
     <div className="p-5 shadow-md flex justify-between">
       <div className="flex items-center gap-8">
