@@ -17,3 +17,4 @@
 - Strapi: https://strapi.io/
 - Shadcn/UI: https://ui.shadcn.com/
 - Lucid: https://lucide.dev/
+- Axios: https://axios-http.com/docs/intro
